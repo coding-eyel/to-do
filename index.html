@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/modal.css">
-  <script src="script.js" type="text/javascript" defer></script>
+  <link rel="stylesheet" href="styles/tasks.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">  <script src="script.js" type="text/javascript" defer></script>
   <title>To Do</title>
 </head>
-<body>
+<body onload="allTasksBtn.click()">
   <div class="site-container">
     <div class="todo-body">
       <div class="todo-menu">
         <div class="menu-header">
-
+          <button id="all-tasks">All Tasks</button>
+          <button id="today-tasks">Today</button>
         </div>
         <div class="menu-content">
-          <div class="project-labels">
-            <span>Lists</span>
-            <button class="project-add">
+          <div class="list-labels">
+            <span>Your Lists</span>
+            <button class="list-add">
               <img id="open-modal" src="images/plus.svg" alt="">
             </button>
           </div>
@@ -27,7 +32,7 @@
               <div class="list-modal-content">
                 <form action="" id="new-list-form">
                   <label for="list-title">List Title</label>
-                  <input type="text" id="list-title">
+                  <input type="text" id="list-title" maxlength="15" placeholder="Max 15 characters">
                 </form>
                 <!-- <form action="" id="modal-form">
                   <label for="todo-title">To Do</label>
@@ -55,10 +60,16 @@
           </div>
         </div>
       </div>
-      <div class="todo-tasks">
-
+      <div id="tasks-container">
+        <div id="newTaskModal" class="new-task-modal">
+          <div class="task-modal-content">
+            <span class="close">&times;</span>
+            <p>SAAAAA</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
 </html>
+
