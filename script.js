@@ -1,7 +1,6 @@
 let addBtn = document.getElementById("add-list");
 let allTasksBtn = document.getElementById("all-tasks");
 let tasksContainer = document.querySelector("#tasks-container");
-let newTaskBtn = document.querySelectorAll(".new-task-btn");
 
 function openCloseListModal() {
   let openListModal = document.getElementById("open-modal");
@@ -55,21 +54,12 @@ addBtn.onclick = function() {
   }
 
   function clickList() {
-    let listTitle = document.querySelectorAll(".newList")
+    let listTitle = document.querySelectorAll(".newList");
+    let titleText = document.querySelector(".list-title-text");
     
     listTitle.forEach((list) => {
       list.addEventListener("click", function() {
-        tasksContainer.innerHTML = `
-        <div class="tasks-content">
-          <div class="task-list-title">
-            <div>${list.textContent}</div>
-          </div>
-          <div class="new-tasks-container">
-            
-          </div>
-          <button type="button" class="new-task-btn">+ Add Task</button>
-        </div>
-        `   
+        titleText.textContent = list.textContent;
       })
     })
   }
@@ -81,28 +71,54 @@ function showAllTasks() {
     tasksContainer.innerHTML = `
       <div class="tasks-content">
         <div class="task-list-title">
-          <div>${allTasksBtn.textContent}</div>
+          <div class="list-title-text">${allTasksBtn.textContent}</div>
         </div>
         <div class="new-tasks-container">
-          
+          <div class="task-display">
+            
+          </div>
         </div>
         <button type="button" class="new-task-btn">+ Add Task</button>
       </div>
-    `   
-  }
-}
+    `;
+
+    let newTaskBtn = document.querySelector(".new-task-btn");
+    let closeTaskModal = document.querySelector(".close-task-modal");
+
+    newTaskBtn.onclick = function() {
+      let newTaskModal = document.getElementById("newTaskModal");
+
+      newTaskModal.style.display = "block";
+    };
+
+    closeTaskModal.onclick = function() {
+      newTaskModal.style.display = "none";
+    }
+  };
+};
 showAllTasks();
 
-function openCloseTaskModal() {
-  let newTaskModal = document.querySelector("#newTaskModal");
 
-  newTaskBtn.forEach(btn => {
-    btn.addEventListener("click", function() {
-      newTaskModal.style.display = "block";
-    })
-  })
+function createNewTask() {
+  let addTaskBtn = document.querySelector(".add-task");
+  let taskTitle = document.querySelector("#todo-title");
+  let taskDescription = document.querySelector("#todo-description");
+  let taskDate = document.querySelector("#todo-date");
+  let taskLibrary = [];
+
+  function createTaskObj(title, description, date) {
+    return{title, description, date}
+  }
+
+  addTaskBtn.onclick = function() {
+    let newTask = createTaskObj(taskTitle.value, taskDescription.value, taskDate.value);
+    taskLibrary.push(newTask);
+    console.log(taskLibrary);
+  }
 }
-openCloseTaskModal();
+createNewTask();
+
+
 
 
 

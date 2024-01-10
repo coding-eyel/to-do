@@ -34,16 +34,6 @@
                   <label for="list-title">List Title</label>
                   <input type="text" id="list-title" maxlength="15" placeholder="Max 15 characters">
                 </form>
-                <!-- <form action="" id="modal-form">
-                  <label for="todo-title">To Do</label>
-                  <input type="text" name="todo-title" id="todo-title" placeholder="e.g pay bills">
-
-                  <label for="todo-description">Description</label>
-                  <input type="text" name="todo-description" id="todo-description" placeholder="e.g pay the water bill">
-
-                  <label for="todo-date">Date</label>
-                  <input type="date" name="todo-date" id="todo-date">
-                </form> -->
                 <div class="list-modal-buttons">
                   <div class="add-todo-btn">
                     <button type="button" id="add-list">Add</button>
@@ -61,10 +51,23 @@
         </div>
       </div>
       <div id="tasks-container">
-        <div id="newTaskModal" class="new-task-modal">
-          <div class="task-modal-content">
-            <span class="close">&times;</span>
-            <p>SAAAAA</p>
+        
+      </div>
+      <div id="newTaskModal" class="new-task-modal">
+        <div class="task-modal-content">
+          <form action="" id="modal-form">
+            <label for="todo-title">To Do</label>
+            <input type="text" name="todo-title" id="todo-title" placeholder="e.g pay bills">
+
+            <label for="todo-description">Description</label>
+            <input type="text" name="todo-description" id="todo-description" placeholder="e.g pay the water bill">
+
+            <label for="todo-date">Date</label>
+            <input type="date" name="todo-date" id="todo-date">
+          </form>
+          <div class="task-modal-btns">
+            <button type="button" class="add-task">Add</button>
+            <button type="button" class="close-task-modal">Close</button>
           </div>
         </div>
       </div>
