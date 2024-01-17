@@ -9,10 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">  <script src="script.js" type="text/javascript" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">  
+  <script src="script.js" type="text/javascript" defer></script>
   <title>To Do</title>
 </head>
-<body onload="allTasksBtn.click()">
+<body">
   <div class="site-container">
     <div class="todo-body">
       <div class="todo-menu">
@@ -57,13 +58,13 @@
         <div class="task-modal-content">
           <form action="" id="modal-form">
             <label for="todo-title">To Do</label>
-            <input type="text" name="todo-title" id="todo-title" placeholder="e.g pay bills">
+            <input type="text" name="todo-title" id="todo-title" placeholder="e.g pay bills" required>
 
             <label for="todo-description">Description</label>
-            <input type="text" name="todo-description" id="todo-description" placeholder="e.g pay the water bill">
+            <input type="text" name="todo-description" id="todo-description" placeholder="e.g pay the water bill" required>
 
             <label for="todo-date">Date</label>
-            <input type="date" name="todo-date" id="todo-date">
+            <input type="date" name="todo-date" id="todo-date" required>
           </form>
           <div class="task-modal-btns">
             <button type="button" class="add-task">Add</button>
