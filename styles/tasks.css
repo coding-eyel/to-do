@@ -185,6 +185,23 @@
   fill: #FF0000;
 }
 
+.task-edit {
+  fill: #b266ff;
+  transition: fill 0.5s ease-in-out;
+}
+
+.task-edit:hover {
+  fill: #00FFFF;
+}
+
+.task-expand {
+  transition: transform 0.5s ease-in-out;
+}
+
+.task-expand-rotated {
+  transform: rotate(180deg);
+}
+
 .task-checkbox {
   clip-path: circle(46% at 50% 50%);
   width: 1.5rem;
