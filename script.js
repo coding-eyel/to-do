@@ -70,17 +70,16 @@ function init() {
       listLibrary.push(newTitle);
       console.log(listLibrary);
 
-      let listDeleteBtns = document.querySelectorAll('.listDeleteBtn');
-      listDeleteBtns.forEach(btn => {
-        btn.addEventListener("click", function () {
-          let result = confirm("Deleting the list will make all tasks in the list appear only in the All Tasks tab. Continue?")
+      let currentListDeleteBtn = newListLine.querySelector(".listDeleteBtn");
 
-          if (result) {
-            this.parentElement.remove();
-            allTasksBtn.click();
-          }
-        })
-      })
+      currentListDeleteBtn.addEventListener('click', function () {
+        let result = confirm("Deleting the list will make all tasks in the list appear only in the All Tasks tab. Continue?")
+
+        if (result) {
+          this.parentElement.remove();
+          allTasksBtn.click();
+        }
+      });
 
       listModal.style.display = "none";
       form.reset();
@@ -325,7 +324,7 @@ function init() {
       let year = date.getFullYear();
       let currentDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
 
-      console.log(String(currentDate));
+      titleText.textContent = "Today's Tasks"
 
       newTasks.forEach(task => {
         let taskDate = task.querySelector(".task-duedate").textContent;

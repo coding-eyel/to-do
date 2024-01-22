@@ -1,0 +1,52 @@
+@media only screen and (max-width: 875px) {
+    .tasks-container {
+        min-width: 460px;
+    }
+
+    .site-container {
+        width: 100vw;
+    }
+
+    .task-list-title {
+        width: 90%;
+    }
+
+    .tasks-content {
+        padding: 1rem;
+        padding-top: 1.9rem;
+    }
+
+    .new-task {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .site-container {
+        width: 100vw;
+    }
+
+    .task-list-title {
+        width: 100%;
+    }
+
+    .tasks-content {
+        padding: 1rem;
+        padding-top: 1.9rem;
+    }
+
+    .new-task {
+        width: 100%;
+    }
+
+    .newListLine {
+        width: 95%;
+    }
+
+    .task-modal-content,
+    .list-modal-content,
+    .edit-modal-content {
+        margin-top: 60%;
+    }
+}
