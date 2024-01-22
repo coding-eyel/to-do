@@ -76,6 +76,28 @@
           </div>
         </div>
       </div>
+
+      <div id="edit-modal" class="edit-modal">
+        <div class="edit-modal-content">
+          <div class="edit-mode">Edit Mode</div>
+          <form action="" id="edit-form">
+            <label for="edit-title">To Do</label>
+            <input type="text" name="edit-title" id="edit-title" placeholder="e.g pay bills // MAX 45 characters"
+              required maxlength="45">
+
+            <label for="edit-description">Description</label>
+            <input type="text" name="edit-description" id="edit-description" placeholder="e.g pay the water bill"
+              required>
+
+            <label for="edit-date">Date</label>
+            <input type="date" name="edit-date" id="edit-date" required>
+          </form>
+          <div class="edit-modal-btns">
+            <button type="button" class="save-task">Save</button>
+            <button type="button" class="close-edit-modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </body>

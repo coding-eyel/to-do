@@ -72,11 +72,9 @@ body {
 .list-labels {
   display: flex;
   align-items: center;
-  box-sizing: border-box;
-  padding-left: 0.5rem;
+  justify-content: center;
   color: white;
   border-top: 2px solid black;
-
   margin-bottom: 0.3rem;
 }
 
@@ -98,7 +96,6 @@ body {
 }
 
 .user-lists {
-  padding-left: 0.9rem;
   height: 30rem;
 }
 
@@ -106,6 +103,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -137,6 +135,7 @@ body {
   display: flex;
   justify-content: space-between;
   border-radius: 1rem;
+  width: 70%;
   background-color: #b266ff;
   transition: 0.3s ease-in-out;
 }

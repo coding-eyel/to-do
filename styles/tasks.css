@@ -56,7 +56,9 @@
   height: auto;
   width: 90%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  word-break: break-all;
 }
 
 .new-tasks-container {
